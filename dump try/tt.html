@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/9164c660dc.js"></script>
+</head>
+
+<style>
+*{
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+box-sizing: border-box;
+}
+ body{
+background: #191919;
+}
+
+.gallery{
+width: 1200px;
+height: 500px;
+display: flex;
+overflow-x: scroll;
+
+}
+
+.gallery div{
+width: 100%;
+display: grid;
+grid-template-columns: auto auto auto;
+grid-gap: 20px;
+padding: 10px;
+flex: none;
+}
+
+.gallery div img{
+    width: 100%;
+    height: 400px;
+    transition: transform 0.5s ;
+}
+
+.gallery::-webkit-scrollbar{
+    display: none;
+}
+
+.gallery-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+    background-color: aqua;
+}
+
+#scroll-right,#scroll-left{
+    cursor: pointer;
+}
+
+.gallery div img:hover{
+    /* filter: grayscale(0); */
+    cursor: pointer;
+    transform: scale(1.1 );
+    
+}
+
+
+</style>
+<body>
+    <div class="gallery-wrap">
+        <button id="scroll-left" onclick="scrollLeft()"><i class="fa-solid fa-angle-left fa-2xl" style="color: #050505;"></i></button>
+
+        <div class="gallery" id="gallery">
+            <div>
+            <span><img src="/images/h-scroll-img/images/image-1.png"></span>
+            <span><img src="/images/h-scroll-img/images/image-2.png"></span>
+            <span><img src="/images/h-scroll-img/images/image-3.png"></span>
+             </div>
+             
+            <div>
+            <span><img src="/images/h-scroll-img/images/image-4.png"></span>
+            <span><img src="/images/h-scroll-img/images/image-5.png"></span>
+            <span><img src="/images/h-scroll-img/images/image-6.png"></span>
+             </div>
+            <div>
+            <span><img src="/images/home-shop-1-image-1.jpg"></span>
+            <span><img src="/images/home-shop-1-image-1.jpg"></span>
+            <span><img src="/images/home-shop-1-image-1.jpg"></span>
+            
+             </div>
+            
+        </div>
+
+        <button id="scroll-right" onclick="scrollRight()"><i class="fa-solid fa-angle-right fa-2xl" style="color: #050505;"></i></button>
+    </div>
+    
+    
+    <script>
+    let scrollContainer = document.querySelector(".gallery");
+    let backBtn = document.getElementById("scroll-left");
+    let nextBtn = document.getElementById("scroll-right");
+    scrollContainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+    scrollContainer.style.scrollBehavior = "auto";
+}); 
+
+nextBtn.addEventListener("click", ()=>{ 
+        scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft += 500;
+
+        
+    });
+    
+    backBtn.addEventListener("click", function(){
+        scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft -= 500;
+        
+
+    
+    });
+
+
+    </script>
+
+
+</body>
+</html>

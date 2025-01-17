@@ -1,0 +1,180 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/9164c660dc.js"></script>
+</head>
+
+<style>
+    .main-div {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.scrolling-content {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+img {
+    width: 250px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.scroll-left, .scroll-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.scroll-left {
+    left: 10px;
+}
+
+.scroll-right {
+    right: 10px;
+}
+
+
+</style>
+<body>
+    <div class="main-div">
+        <div class="scrolling-content" id="scrollingContent">
+            <img src="/images/home-shop-1-image-5.jpg" alt="Image 1">
+            <img src="/images/home-shop-1-image-4.jpg" alt="Image 2">
+            <img src="/images/home-shop-1-image-3.jpg" alt="Image 3">
+            <img src="/images/home-shop-1-image-2.jpg" alt="Image 3">
+            <img src="/images/home-shop-1-image-1.jpg" alt="Image 3">
+            <img src="/images/home-shop-1-image-2.jpg" alt="Image 3">
+            <img src="/images/home-shop-1-image-4.jpg" alt="Image 3">
+            <img src="/images/home-shop-1-image-3.jpg" alt="Image 3">
+            <img src="/images/home-shop-1-image-4.jpg" alt="Image 3">
+            <img src="/images/home-shop-1-image-2.jpg" alt="Image 3">
+            <img src="/images/home-shop-1-image-1.jpg" alt="Image 3">
+            <img src="/images/home-shop-1-image-1.jpg" alt="Image 3">
+            <img src="/images/home-shop-1-image-4.jpg" alt="Image 3">
+            <img src="/images/home-shop-1-image-5.jpg" alt="Image 3">
+            
+        </div>
+            <button class="scroll-left" onclick="scrollLeft()"><i class="fa-solid fa-angle-left fa-2xl" style="color: #050505;"></i></button>
+            <button class="scroll-right" onclick="scrollRight()"><i class="fa-solid fa-angle-right fa-2xl" style="color: #050505;"></i></button>
+    </div>
+    
+    <script>
+// const scrollingContent = document.getElementById('scrollingContent');
+// const images = document.querySelectorAll('.scrolling-content img');
+// let currentIndex = 0;
+
+// function scrollLeft() {
+//     if (currentIndex === 0) {
+//         currentIndex = images.length - 1;
+//     } else {
+//         currentIndex--;
+//     }
+//     smoothScroll();
+// }
+
+// function scrollRight() {
+//     if (currentIndex === images.length - 1) {
+//         currentIndex = 0;
+//     } else {
+//         currentIndex++;
+//     }
+//     smoothScroll();
+// }
+
+// function smoothScroll() {
+//     const offset = images[currentIndex].offsetLeft;
+//     scrollingContent.style.transform = `translateX(-${offset}px)`;
+// }
+
+
+// const scrollingContent = document.getElementById('scrollingContent');
+// const images = document.querySelectorAll('.scrolling-content img');
+// let currentIndex = 0;
+
+// function scrollLeft() {
+//     if (currentIndex === 0) {
+//         currentIndex = images.length - 1;
+//     } else {
+//         currentIndex--;
+//     }
+//     smoothScroll();
+// }
+
+// function scrollRight() {
+//     if (currentIndex === images.length - 1) {
+//         currentIndex = 0;
+//     } else {
+//         currentIndex++;
+//     }
+//     smoothScroll();
+// }
+
+// function smoothScroll() {
+//     const offset = images[currentIndex].offsetLeft;
+//     scrollingContent.style.transform = `translateX(-${offset}px)`;
+// }
+
+const scrollingContent = document.getElementById('scrollingContent');
+const images = document.querySelectorAll('.scrolling-content img');
+let currentIndex = 0;
+
+function scrollLeft() {
+    currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+    smoothScroll();
+}
+
+function scrollRight() {
+    currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+    smoothScroll();
+}
+
+function smoothScroll() {
+    const offset = images[currentIndex].offsetLeft;
+    scrollingContent.style.transform = `translateX(-${offset}px)`;
+}
+
+
+
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/9164c660dc.js"></script>
+<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+
+    <style>
+        .fa-heart {
+  color: black; /* Default color */
+  font-size: 24px; /* Adjust font size as needed */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.fa-heart:hover {
+  color: red; /* Color to fill on hover */
+}
+
+    </style>
+</head>
+<body>
+    
+    <span class="fa fa-heart"></span>
+
+</body>
+</html>

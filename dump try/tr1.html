@@ -1,0 +1,212 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="https://kit.fontawesome.com/9164c660dc.js"></script>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-color: black;
+
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .main-scroll-div{
+            width: 80%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 2px solid red;
+
+
+        }
+        .cover{
+            position: relative;
+            width: 90%;
+            height: 50%;
+
+        }
+
+        .cover::before{
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            z-index: 99;
+            height: 100%;
+            width: 150px;
+            background-image:linear-gradient(90deg,black,transparent) ;
+        }
+        .cover::after{
+            position: absolute;
+            content: "";
+            right: 0;
+            top: 0;
+            z-index: 99;
+            height: 100%;
+            width: 150px;
+            background-image:linear-gradient(-90deg,black,transparent) ;
+        }
+
+        .scroll-images{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            overflow: auto;
+            position: relative;
+            scroll-behavior: smooth;
+        }
+
+        .child{
+            min-width: 400px;
+            height: 250px;
+            margin: 1px 10px;
+            cursor: pointer;
+            border: 1px solid white;
+            overflow: hidden;
+        }
+
+        .scroll-images::-webkit-scrollbar{
+            -webkit-appearance:none ;
+        }
+
+        .child-img{
+            width: 50%;
+            height: 50%;
+        }
+
+        .icon{
+            color: greenyellow;
+            background-color: black;
+            font-size: 50px;
+            outline: none;
+            border: none;
+            padding: 0px 20px;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main-scrool-div">
+        <div>
+            <button class="icon" onclick="scrollleft()"><i class="fa-solid fa-angle-right fa-2xl" style="color: #050505;"></i></button>
+        </div>
+        <div class="cover">
+            <div class="scroll-images">
+                <div class="child"><img class="child-img" src="/images/logo-dark.png" alt=""></div>
+                <div class="child"><img class="child-img" src="/images/logo-dark.png" alt=""></div>
+                <div class="child"><img class="child-img" src="/images/logo-dark.png" alt=""></div>
+                <div class="child"><img class="child-img" src="/images/logo-dark.png" alt=""></div>
+                <div class="child"><img class="child-img" src="/images/logo-dark.png" alt=""></div>
+                <div class="child"><img class="child-img" src="/images/logo-dark.png" alt=""></div>
+                
+            </div>
+        </div>
+        <div>
+            <button class="icon" onclick="scrollright()"><i class="fa-solid fa-angle-right fa-2xl" style="color: #050505;"></i></button>
+        </div>
+    </div>
+
+    <script>
+        function scrollleft(){
+            var left =document.querySelector(".scroll-images");
+            left.scrollBy(350,0)
+        }
+        function scrollright(){
+            var right =document.querySelector(".scroll-images");
+            right.scrollBy(-350,0)
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh; 
+}
+
+.gallery-wrap {
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px; /* Adjust font size as needed */
+}
+
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="content">
+            <h1>Centered and Near Upper Line Text</h1>
+        </div>
+    </div> -->
+    
+    <div class="box1">
+        <!-- <div class="box1-scroll">
+            <h2>New Products</h2>
+        </div> -->
+        <!-- <div class="lower-div">Lower Div</div> -->
+        <div class="gallery-wrap">
+            <h1>New Products</h1>
+            <button id="scroll-left" onclick="scrollLeft()"><i class="fa-solid fa-angle-left fa-2xl" style="color: #050505;"></i></button>
+    
+            <!-- <div class="gallery" id="gallery">
+                <div>
+                <span><img src="/images/h-scroll-img/images/image-1.png"></span>
+                <span><img src="/images/h-scroll-img/images/image-2.png"></span>
+                <span><img src="/images/h-scroll-img/images/image-3.png"></span>
+                 </div>
+                 
+                <div>
+                <span><img src="/images/h-scroll-img/images/image-4.png"></span>
+                <span><img src="/images/h-scroll-img/images/image-5.png"></span>
+                <span><img src="/images/h-scroll-img/images/image-6.png"></span>
+                 </div>
+                <div>
+                <span><img src="/images/home-shop-1-image-1.jpg"></span>
+                <span><img src="/images/home-shop-1-image-1.jpg"></span>
+                <span><img src="/images/home-shop-1-image-1.jpg"></span>
+                
+                 </div>
+                
+            </div> -->
+    
+            <button id="scroll-right" onclick="scrollRight()"><i class="fa-solid fa-angle-right fa-2xl" style="color: #050505;"></i></button>
+        </div>
+        
+    </div>
+
+</body>
+</html>
+
